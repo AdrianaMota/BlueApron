@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage NavigationPage.HasNavigationBar="False" BackgroundColor="{StaticResource BackgroundColor}"
+             Shell.NavBarIsVisible="False" Shell.TabBarIsVisible="False" 
+    xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:BlueApronApp" 
+             x:Class="BlueApronApp.Views.PlansView" Title="Get Started">
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid VerticalOptions="Start" Margin="20, 50, 20, 10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="9*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+               <Label Grid.Column="0" Grid.RowSpan="2" Text="&#xf00d;" FontSize="30" VerticalOptions="Center"
+                      TextColor="{StaticResource primaryColor}" FontFamily="{StaticResource FontAwesomeSolid}">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Command="{Binding BackButton}"/>
+                    </Label.GestureRecognizers>
+               </Label> 
+                <Label Grid.Column="1" Grid.Row="0" Margin="-25, 0, 0, 0" Text="Let's personalize your plan." TextColor="{StaticResource primaryColor}" FontSize="17" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" VerticalOptions="Center" FontFamily="Lato-Black" />
+                <Label Grid.Column="1" Grid.Row="1" Margin="-25, -3, 0, 0" Text="Which one fits your lifestyle?" TextColor="{StaticResource primaryColor}" FontSize="17" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" VerticalOptions="Center" FontFamily="Lato-Black" />
+            </Grid>
+
+            <ListView ItemsSource="{Binding Plans}" ItemTapped="OnPlanSelected" HeightRequest="600"
+                      HasUnevenRows="True" SeparatorVisibility="None" SeparatorColor="Transparent" BackgroundColor="{StaticResource BackgroundColor}">
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                                <StackLayout>
+                                <Frame CornerRadius="8" Margin="20, 10" HasShadow="False" Padding="0" IsClippedToBounds="True" >
+                                
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*" />
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
+                                        </Grid.RowDefinitions>
+
+                                        <Image Grid.Row="0" Source="{Binding ImageUrl}" VerticalOptions="Start" Aspect="AspectFill" HeightRequest="210" />
+                                        <StackLayout Grid.Row="1" Margin="0, 17">
+                                            <Label Text="{Binding Name}" FontFamily="SourceSerifPro-Bold" TextColor="{StaticResource primaryColor}"
+                                                   FontSize="20" HorizontalOptions="Center" HorizontalTextAlignment="Center" />
+                                            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0, -5, 0, 0" >
+                                                <Label Text="{Binding Serves, StringFormat='{0} as low as'}" TextColor="{StaticResource mediumColorDark}" FontSize="15" FontFamily="Lato-Bold" HorizontalOptions="Center" />
+                                                <Label Text="{Binding Option3}" TextColor="{StaticResource tertiaryColor}" FontSize="15" FontFamily="Lato-Bold" HorizontalOptions="Center" />
+                                                <Label Text="a serving" TextColor="{StaticResource mediumColorDark}" FontSize="15" FontFamily="Lato-Bold" HorizontalOptions="Center" />
+
+                                            </StackLayout>
+                                        </StackLayout>
+
+                                    
+                                    </Grid>
+                                </Frame>
+                                
+                            </StackLayout>
+                        </ViewCell>
+                       
+
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+                <ListView.Footer>
+                    <Label Text="You can always change this later" TextColor="{StaticResource mediumColor}" FontSize="15" FontFamily="Lato-Bold" HorizontalOptions="Center" VerticalOptions="Start"/>
+
+                </ListView.Footer>
+
+            </ListView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

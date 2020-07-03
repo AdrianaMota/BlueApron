@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage Title="Recipes" Shell.BackgroundColor="White"
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:BlueApronApp" x:Class="BlueApronApp.Views.RecipesView">
+    <Shell.TitleView>
+        <Label Text="All Recipes" HorizontalOptions="Center" FontSize="17" HorizontalTextAlignment="Center"
+            VerticalOptions="Center" FontFamily="Lato-Black"
+               TextColor="{StaticResource primaryColor}"/>
+    </Shell.TitleView>
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView ItemsSource="{Binding Recipes}" HasUnevenRows="True" SeparatorColor="LightGray" Margin="10, 0"
+                      ItemTapped="OnRecipeSelected"
+                      >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Vertical">
+                                <StackLayout Orientation="Horizontal" Margin="0, 15">
+                                    <Image Source="{Binding ImageUrl}"
+                                           WidthRequest="100" HeightRequest="100"
+                                           Aspect="AspectFill" Margin="0, 0, 5, 0"/>
+                                    <StackLayout>
+                                        <Label Text="{Binding Name}" TextColor="{StaticResource primaryColor}"
+                                               FontFamily="Lato-Black" FontSize="15"/>
+                                        <Label Text="{Binding Description}" TextColor="{StaticResource neutralColor}"
+                                               FontFamily="SourceSerifPro-Regular" FontSize="14" Margin="0, -5, 0, 0"/>
+                                    </StackLayout>
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>

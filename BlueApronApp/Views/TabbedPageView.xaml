@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:local="clr-namespace:BlueApronApp" xmlns:local1="clr-namespace:BlueApronApp.Views"
+            x:Class="BlueApronApp.Views.TabbedPageView">
+    <!--Pages can be added as references or inline-->
+    <NavigationPage Title="Learn More" IconImageSource="{local:EmbeddedImages BlueApronApp.Assets.Apron.png}">
+        <x:Arguments>
+            <local:MainPage />
+        </x:Arguments>
+    </NavigationPage>
+    <NavigationPage Title="Menu" IconImageSource="{local:EmbeddedImages BlueApronApp.Assets.Apron.png}">
+        <x:Arguments>
+            <local1:MenuView />
+        </x:Arguments>
+    </NavigationPage>
+    <NavigationPage Title="Recipes" IconImageSource="{local:EmbeddedImages BlueApronApp.Assets.Apron.png}">
+        <x:Arguments>
+            <local1:RecipesView />
+        </x:Arguments>
+    </NavigationPage>
+</TabbedPage>

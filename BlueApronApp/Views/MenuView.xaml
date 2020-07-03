@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage NavigationPage.HasNavigationBar="False" Title="On the Menu" Shell.NavBarIsVisible="False"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:BlueApronApp"
+             x:Class="BlueApronApp.Views.MenuView">
+    <ContentPage.Content>
+        <StackLayout Margin="0, 50, 0, 0">
+            <Grid BackgroundColor="White" RowSpacing="10" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="0.5"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="0.5"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="2"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="2"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="2"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Image Grid.Row="0" Grid.ColumnSpan="7" Source="{local:EmbeddedImages BlueApronApp.Assets.Apron.png}" HeightRequest="30" HorizontalOptions="Center"/>
+                <BoxView Grid.Row="1" Grid.ColumnSpan="7" Color="{StaticResource lightColor}"/>
+
+                <StackLayout Grid.Row="2" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center" Margin="0, 5">
+                    <Label Text="Week of" HorizontalTextAlignment="Center" HorizontalOptions="Center" TextColor="{StaticResource primaryColor}" FontFamily="Lato-Regular" FontSize="13"/>
+                    <Label Text="JUL 1" HorizontalTextAlignment="Center" HorizontalOptions="Center" TextColor="{StaticResource primaryColor}" FontFamily="Lato-Black" FontSize="13" Margin="0, -6, 0, 0"/>
+                </StackLayout>
+                <BoxView Grid.Row="2" Grid.Column="1" Color="{StaticResource lightColor}" HeightRequest="3"/>
+
+                <StackLayout Grid.Row="2" Grid.Column="2" HorizontalOptions="Center" VerticalOptions="Center" Margin="0, 5">
+                    <Label Text="Week of" HorizontalTextAlignment="Center" HorizontalOptions="Center" TextColor="{StaticResource lightColor}" FontFamily="Lato-Regular" FontSize="13"/>
+                    <Label Text="JUL 8" HorizontalTextAlignment="Center" HorizontalOptions="Center" TextColor="{StaticResource mediumColor}" FontFamily="Lato-Black" FontSize="13" Margin="0, -6, 0, 0"/>
+                </StackLayout>
+                <BoxView Grid.Row="2" Grid.Column="3" Color="{StaticResource lightColor}" HeightRequest="3"/>
+
+                <StackLayout Grid.Row="2" Grid.Column="4" HorizontalOptions="Center" VerticalOptions="Center" Margin="0, 5">
+                    <Label Text="Week of" HorizontalTextAlignment="Center" HorizontalOptions="Center" TextColor="{StaticResource lightColor}" FontFamily="Lato-Regular" FontSize="13"/>
+                    <Label Text="JUL 15" HorizontalTextAlignment="Center" HorizontalOptions="Center" TextColor="{StaticResource mediumColor}" FontFamily="Lato-Black" FontSize="13" Margin="0, -6, 0, 0"/>
+                </StackLayout>
+                <BoxView Grid.Row="2" Grid.Column="5" Color="{StaticResource lightColor}" HeightRequest="3"/>
+
+                <StackLayout Grid.Row="2" Grid.Column="6" HorizontalOptions="Center" VerticalOptions="Center" Margin="0, 5">
+                    <Label Text="Week of" HorizontalTextAlignment="Center" HorizontalOptions="Center" TextColor="{StaticResource lightColor}" FontFamily="Lato-Regular" FontSize="13"/>
+                    <Label Text="JUL 22" HorizontalTextAlignment="Center" HorizontalOptions="Center" TextColor="{StaticResource mediumColor}" FontFamily="Lato-Black" FontSize="13" Margin="0, -6, 0, 0"/>
+                </StackLayout>
+                
+
+                <BoxView Grid.Row="3" Grid.ColumnSpan="7" Color="{StaticResource lightColor}"/>
+
+            </Grid>
+            <StackLayout Orientation="Horizontal" Margin="15, 5">
+                <Label Text="WEEK OF" FontFamily="Lato-Black" TextColor="{StaticResource primaryColorLight}" FontSize="12"/>
+                <Label Text="JUL 1" FontFamily="Lato-Black" TextColor="{StaticResource primaryColor}" FontSize="12"/>
+            </StackLayout>
+            <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" /> 
+            </Grid.RowDefinitions>
+            <ListView SeparatorVisibility="None" ItemsSource="{Binding Recipes}" HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid RowSpacing="15">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="250"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Image Grid.RowSpan="3" Source="{Binding ImageUrl}" Aspect="AspectFill" Margin="0, 5, 0, 0"/>
+                                <BoxView Grid.RowSpan="3" Color="Black" Opacity="0.4" HorizontalOptions="Fill" Margin="0, 5, 0, 0"/>
+
+                                <Label Grid.Row="1" Text="{Binding Name}" TextColor="White" FontFamily="Lato-Black" FontSize="20" Margin="15, 0"/>
+                                <Label Grid.Row="2" Text="{Binding Description}" TextColor="White" FontFamily="SourceSerifPro-Regular" FontSize="15" Margin="15, -10, 15, 23"/>
+                            </Grid>
+                            
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+                <ListView.Footer>
+                    <BoxView BackgroundColor="Transparent" HeightRequest="200" />
+                </ListView.Footer>
+            </ListView>
+                 <Button Grid.Row="0" Text="Get Started" FontFamily="Lato-Bold" FontSize="22"
+                BackgroundColor="{StaticResource secondaryColor}" Command="{Binding GetStarted}"
+                BorderRadius="5" TextColor="White" HorizontalOptions="CenterAndExpand"
+                Padding="120,14"
+                 Margin="20,0,20,100" VerticalOptions="End"/>
+            </Grid>
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,78 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="4.2.0.709249" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.2.0" />
+    <PackageReference Include="DLToolkit.Forms.Controls.ImageCropView" Version="1.0.7" />
+    <PackageReference Include="XLabs.Forms" Version="2.0.5782" />
+    <PackageReference Include="XLabs.Core" Version="2.0.5782" />
+    <PackageReference Include="XLabs.Platform" Version="2.0.5782" />
+    <PackageReference Include="ThriveGmbH.BottomNavigationBar.XF" Version="1.0.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\" />
+    <Folder Include="ViewModels\" />
+    <Folder Include="Assets\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Assets\LearnMore1.jpg" />
+    <None Remove="Assets\learnmore1.jpg" />
+    <None Remove="Assets\learnmore.jpg" />
+    <None Remove="Assets\WhiteApron.png" />
+    <None Remove="Assets\whiteapron.png" />
+    <None Remove="Assets\burger.png" />
+    <None Remove="Assets\delivery.png" />
+    <None Remove="Assets\Apron.png" />
+    <None Remove="Assets\bao.jpg" />
+    <None Remove="Assets\cheeseburger.jpg" />
+    <None Remove="Assets\chicken.jpg" />
+    <None Remove="Assets\pork.jpg" />
+    <None Remove="Assets\dotmenu.png" />
+    <None Remove="Assets\calzone.jpg" />
+    <None Remove="Assets\soy.jpg" />
+    <None Remove="Assets\calories.png" />
+    <None Remove="Assets\servings.png" />
+    <None Remove="Assets\time.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Remove="Views\TabbedPageView.xaml" />
+    <EmbeddedResource Remove="TabbedPage.xaml" />
+    <EmbeddedResource Remove="TabbedPage.xaml" />
+    <EmbeddedResource Remove="TabbedPage.xaml" />
+    <EmbeddedResource Remove="Views\LearnMoreView.xaml" />
+    <EmbeddedResource Remove="TabbedPage.xaml" />
+    <EmbeddedResource Remove="TabPage.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\learnmore.jpg" />
+    <EmbeddedResource Include="Assets\whiteapron.png" />
+    <EmbeddedResource Include="Assets\burger.png" />
+    <EmbeddedResource Include="Assets\delivery.png" />
+    <EmbeddedResource Include="Assets\Apron.png" />
+    <EmbeddedResource Include="Assets\dotmenu.png" />
+    <EmbeddedResource Include="Assets\calories.png" />
+    <EmbeddedResource Include="Assets\servings.png" />
+    <EmbeddedResource Include="Assets\time.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Views\MenuView.cs" />
+    <Compile Remove="Views\RecipesView.cs" />
+    <Compile Remove="Views\TabbedPageView.xaml.cs" />
+    <Compile Remove="ViewModels\IPageService.cs" />
+    <Compile Remove="ViewModels\PageService.cs" />
+    <Compile Remove="ViewModels\ProfileViewModel.cs" />
+    <Compile Remove="Models\Profile.cs" />
+    <Compile Remove="Models\Profile.cs" />
+    <Compile Remove="TabbedPage.xaml.cs" />
+    <Compile Remove="CustomTabbedPageRender.cs" />
+    <Compile Remove="Views\MainShell.cs" />
+    <Compile Remove="Views\LearnMoreView.xaml.cs" />
+    <Compile Remove="TabPage.xaml.cs" />
+  </ItemGroup>
+</Project>

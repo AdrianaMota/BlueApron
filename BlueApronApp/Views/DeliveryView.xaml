@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage NavigationPage.HasNavigationBar="False" BackgroundColor="{StaticResource BackgroundColor}"
+             Shell.NavBarIsVisible="False" Shell.TabBarIsVisible="False" 
+    xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="BlueApronApp.Views.DeliveryView">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" /> 
+            </Grid.RowDefinitions>
+            <StackLayout Grid.Row="0">
+                 <Grid VerticalOptions="Start" Margin="20, 50, 20, 10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="9*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                   <Label Grid.Column="0" Grid.RowSpan="2" Text="&#xf053;" FontSize="30" VerticalOptions="Center"
+                          TextColor="{StaticResource primaryColor}" FontFamily="{StaticResource FontAwesomeSolid}">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer NumberOfTapsRequired="1" Command="{Binding BackButton}"/>
+                        </Label.GestureRecognizers>
+                   </Label> 
+                    <Label Grid.Column="1" Grid.Row="0" Margin="-25, 0, 0, 0" Text="Where should we deliver?" TextColor="{StaticResource primaryColor}" FontSize="17" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" VerticalOptions="Center" FontFamily="Lato-Black" />
+                </Grid>
+
+                <Grid RowSpacing="10" ColumnSpacing="10" Margin="20">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <StackLayout Grid.Row="0" Grid.Column="0">
+                        <Label Text="First Name" FontSize="15" FontFamily="Lato-Black" TextColor="{StaticResource primaryColor}"/>
+                        <Entry HorizontalOptions="Fill" Margin="0, -5, 0, 0" HeightRequest="45" />
+                    </StackLayout>
+                    <StackLayout Grid.Row="0" Grid.Column="1">
+                        <Label Text="Last Name" FontSize="15" FontFamily="Lato-Black" TextColor="{StaticResource primaryColor}"/>
+                        <Entry HorizontalOptions="Fill" Margin="0, -5, 0, 0" HeightRequest="45" />
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="1" Grid.ColumnSpan="2">
+                        <Label Text="Address" FontSize="15" FontFamily="Lato-Black" TextColor="{StaticResource primaryColor}"/>
+                        <Entry HorizontalOptions="Fill" Margin="0, -5, 0, 0" HeightRequest="45" />
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="2" Grid.Column="0">
+                        <Label Text="Apt/Suite/Floor #" FontSize="15" FontFamily="Lato-Black" TextColor="{StaticResource primaryColor}"/>
+                        <Entry HorizontalOptions="Fill" Margin="0, -5, 0, 0" HeightRequest="45" />
+                    </StackLayout>
+                    <StackLayout Grid.Row="2" Grid.Column="1">
+                        <Label Text="Zip" FontSize="15" FontFamily="Lato-Black" TextColor="{StaticResource primaryColor}"/>
+                        <Entry HorizontalOptions="Fill" Margin="0, -5, 0, 0" Keyboard="Numeric" HeightRequest="45" />
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="3" Grid.Column="0">
+                        <Label Text="City" FontSize="15" FontFamily="Lato-Black" TextColor="{StaticResource primaryColor}"/>
+                        <Entry HorizontalOptions="Fill" Margin="0, -5, 0, 0" HeightRequest="45" />
+                    </StackLayout>
+                    <StackLayout Grid.Row="3" Grid.Column="1">
+                        <Label Text="State" FontSize="15" FontFamily="Lato-Black" TextColor="{StaticResource primaryColor}"/>
+                        <Picker x:Name="picker"
+                                Title="Select a State" Margin="0, -5, 0, 0" HeightRequest="45">
+                          <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                              <x:String>California</x:String>
+                              <x:String>Texas</x:String>
+                              <x:String>Florida</x:String>
+                              <x:String>New Jersey</x:String>
+                              <x:String>Michigan</x:String>
+                              <x:String>Ohio</x:String>
+                              <x:String>Pennsylvania</x:String>
+                              <x:String>Massachusetts</x:String>
+                            </x:Array>
+                          </Picker.ItemsSource>
+                        </Picker>
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="4" Grid.ColumnSpan="2">
+                        <Label Text="Phone Number" FontSize="15" FontFamily="Lato-Black" TextColor="{StaticResource primaryColor}"/>
+                        <Entry HorizontalOptions="Fill" Margin="0, -5, 0, 0" Keyboard="Numeric" HeightRequest="45" />
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="5" Grid.ColumnSpan="2">
+                        <Label Text="Special Instructions (Optional)" FontSize="15" FontFamily="Lato-Black" TextColor="{StaticResource primaryColor}"/>
+                        <Entry HorizontalOptions="Fill" Margin="0, -5, 0, 0" Placeholder="e.g. Please leave with front office" HeightRequest="45" />
+                    </StackLayout>
+                </Grid>
+
+            </StackLayout>
+            <Button Grid.Row="0" Text="Continue" FontFamily="Lato-Bold" FontSize="20"
+                BackgroundColor="{StaticResource primaryColor}" Command="{Binding Continue}"
+                BorderRadius="5" TextColor="White" HorizontalOptions="CenterAndExpand"
+                Padding="140,12"
+                Margin="20,0,20,32" VerticalOptions="End"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

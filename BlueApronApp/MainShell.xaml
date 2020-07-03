@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Shell 
+    xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:views="clr-namespace:BlueApronApp.Views" x:Class="BlueApronApp.MainShell"
+    Shell.BackgroundColor="#FAFCFB"
+    Shell.TabBarBackgroundColor="#4DF9FAFC"
+    Shell.TabBarForegroundColor="{StaticResource primaryColor}"
+    Shell.TabBarTitleColor="{StaticResource primaryColor}"
+    Shell.TabBarUnselectedColor="{StaticResource mediumColorDark}"
+    >
+    <Shell.MenuItemTemplate>
+
+    </Shell.MenuItemTemplate>
+   <TabBar>
+        <Tab Title="Learn More" >
+            <Tab.Icon>
+                <FontImageSource FontFamily="{StaticResource FontAwesomeRegular}" Glyph="&#xf2b9;" />
+            </Tab.Icon>
+            <ShellContent>
+                <views:MoreView />
+            </ShellContent>
+        </Tab>
+        <Tab Title="On the Menu">
+            <Tab.Icon>
+                <FontImageSource FontFamily="{StaticResource FontAwesomeRegular}" Glyph="&#xf022;" />
+            </Tab.Icon>
+            <ShellContent>
+                <views:MenuView />
+            </ShellContent>
+        </Tab>
+        <Tab Title="Recipes">
+            <Tab.Icon>
+                <FontImageSource FontFamily="{StaticResource FontAwesomeSolid}" Glyph="&#xf002;" />
+            </Tab.Icon>
+            <ShellContent>
+                <views:RecipesView />
+            </ShellContent>
+        </Tab>
+        <Tab Title="Profile">
+            <Tab.Icon>
+                <FontImageSource FontFamily="{StaticResource FontAwesomeRegular}" Glyph="&#xf007;" />
+            </Tab.Icon>
+            <ShellContent>
+                <views:ProfileView />
+            </ShellContent>
+        </Tab>
+    </TabBar>
+</Shell>

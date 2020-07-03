@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TabbedPage xmlns:xamarinforms="clr-namespace:BottomBar.XamarinForms;assembly=BottomBar.XamarinForms" xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+            android:TabbedPage.ToolbarPlacement="Bottom"
+            x:Class="BlueApronApp.TabbedPage" >
+    <!--Pages can be added as references or inline-->
+    <ContentPage Title="Learn More" />
+
+    <ContentPage Title="On the Menu" />
+
+    <ContentPage Title="Recipes" />
+
+    <ContentPage Title="Profile" />
+
+</TabbedPage>

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:d="http://xamarin.com/schemas/2014/forms/design" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="BlueApronApp.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <Color x:Key="primaryColor">#323568</Color>
+            <Color x:Key="secondaryColor">#FE6C30</Color>
+            <Color x:Key="tertiaryColor">#01AB77</Color>
+            <Color x:Key="primaryColorLight">#8195CA</Color>
+            <Color x:Key="neutralColor">#737373</Color>
+            <Color x:Key="darkColor">#383838</Color>
+            <Color x:Key="mediumColorDark">#8B8B8B</Color>
+            <Color x:Key="mediumColor">#BEBEBE</Color>
+            <Color x:Key="lightColor">#DCDCDC</Color>
+            <Color x:Key="BackgroundColor">#EDEEF0</Color>
+        </ResourceDictionary>
+        <OnPlatform x:TypeArguments="x:String" x:Key="FontAwesomeBrands">
+            <On Platform="Android" Value="FontAwesome5Brands.otf#Regular" />
+            <On Platform="iOS" Value="FontAwesome5Brands-Regular" />
+        </OnPlatform>
+
+        <OnPlatform x:TypeArguments="x:String" x:Key="FontAwesomeSolid">
+            <On Platform="Android" Value="FontAwesome5Solid.otf#Regular" />
+            <On Platform="iOS" Value="FontAwesome5Free-Solid" />
+        </OnPlatform>
+
+        <OnPlatform x:TypeArguments="x:String" x:Key="FontAwesomeRegular">
+            <On Platform="Android" Value="FontAwesome5Regular.otf#Regular" />
+            <On Platform="iOS" Value="FontAwesome5Free-Regular" />
+        </OnPlatform>
+    </Application.Resources>
+</Application>

@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage BackgroundColor="{StaticResource BackgroundColor}" Title="Profile" Shell.BackgroundColor="White"
+    xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="BlueApronApp.Views.ProfileView">
+    <Shell.TitleView>
+        <Label Text="Profile" HorizontalOptions="Center" FontSize="17" HorizontalTextAlignment="Center"
+            VerticalOptions="Center" FontFamily="Lato-Black"
+               TextColor="{StaticResource primaryColor}"/>
+    </Shell.TitleView>
+    <ContentPage.Content>
+        <TableView Intent="Settings" HasUnevenRows="True" >
+    <TableRoot>
+        <TableSection Title="MY FOOD PICS">
+            <ViewCell>
+                <Grid Margin="0, 20">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Label Grid.Row="0" Text="&#xf030;" FontFamily="{StaticResource FontAwesomeSolid}" TextColor="#D5D9E4" FontSize="70" HorizontalOptions="Center"/>
+                    <Label Grid.Row="1" Text="Start Snapping" FontFamily="SourceSerifPro-Bold" TextColor="{StaticResource primaryColor}" HorizontalOptions="Center" />
+                    <Label Grid.Row="2" Text="Channel your inner food photographer" FontFamily="Lato-Regular" TextColor="{StaticResource mediumColor}" HorizontalOptions="Center" />
+                </Grid>
+            </ViewCell>
+        </TableSection>
+        <TableSection>
+            <ViewCell>
+                <StackLayout Orientation="Horizontal" Margin="20, 15" VerticalOptions="Center">
+                    <Label Text="Saved Recipes" TextColor="{StaticResource primaryColor}" FontFamily="Lato-Regular" VerticalOptions="Center" FontSize="18"/>
+                    <Label Text="&#xf105;" TextColor="{StaticResource lightColor}" FontFamily="{StaticResource FontAwesomeSolid}" HorizontalOptions="EndAndExpand" VerticalOptions="Center" FontSize="22" />
+                </StackLayout>
+            </ViewCell>
+            <ViewCell>
+                <StackLayout Orientation="Horizontal" Margin="20, 15" VerticalOptions="Center">
+                    <Label Text="Manage Push Notifications" TextColor="{StaticResource primaryColor}" FontFamily="Lato-Regular" VerticalOptions="Center" FontSize="18"/>
+                    <Label Text="&#xf105;" TextColor="{StaticResource lightColor}" FontFamily="{StaticResource FontAwesomeSolid}" HorizontalOptions="EndAndExpand" VerticalOptions="Center" FontSize="22" />
+                </StackLayout>
+            </ViewCell>
+        </TableSection>
+        <TableSection Title="BLUE APRON">
+            <ViewCell>
+                <StackLayout Orientation="Horizontal" Margin="20, 15" VerticalOptions="Center">
+                    <Label Text="Report Order Issue" TextColor="{StaticResource primaryColor}" FontFamily="Lato-Regular" VerticalOptions="Center" FontSize="18"/>
+                    <Label Text="&#xf105;" TextColor="{StaticResource lightColor}" FontFamily="{StaticResource FontAwesomeSolid}" HorizontalOptions="EndAndExpand" VerticalOptions="Center" FontSize="22" />
+                </StackLayout>
+            </ViewCell>
+            <ViewCell>
+                <StackLayout Orientation="Horizontal" Margin="20, 15" VerticalOptions="Center">
+                    <Label Text="Freshness Guarantee" TextColor="{StaticResource primaryColor}" FontFamily="Lato-Regular" VerticalOptions="Center" FontSize="18"/>
+                    <Label Text="&#xf105;" TextColor="{StaticResource lightColor}" FontFamily="{StaticResource FontAwesomeSolid}" HorizontalOptions="EndAndExpand" VerticalOptions="Center" FontSize="22" />
+                </StackLayout>
+            </ViewCell>
+            <ViewCell>
+                <StackLayout Orientation="Horizontal" Margin="20, 15" VerticalOptions="Center">
+                    <Label Text="Contact &amp; FAQ" TextColor="{StaticResource primaryColor}" FontFamily="Lato-Regular" VerticalOptions="Center" FontSize="18"/>
+                    <Label Text="&#xf105;" TextColor="{StaticResource lightColor}" FontFamily="{StaticResource FontAwesomeSolid}" HorizontalOptions="EndAndExpand" VerticalOptions="Center" FontSize="22" />
+                </StackLayout>
+            </ViewCell>
+            <ViewCell>
+                <StackLayout Orientation="Horizontal" Margin="20, 15" VerticalOptions="Center">
+                    <Label Text="Rate this App" TextColor="{StaticResource primaryColor}" FontFamily="Lato-Regular" VerticalOptions="Center" FontSize="18"/>
+                    <Label Text="&#xf105;" TextColor="{StaticResource lightColor}" FontFamily="{StaticResource FontAwesomeSolid}" HorizontalOptions="EndAndExpand" VerticalOptions="Center" FontSize="22" />
+                </StackLayout>
+            </ViewCell>
+            <ViewCell>
+                <StackLayout Orientation="Horizontal" Margin="20, 15" VerticalOptions="Center">
+                    <Label Text="Send App Feedback" TextColor="{StaticResource primaryColor}" FontFamily="Lato-Regular" VerticalOptions="Center" FontSize="18"/>
+                    <Label Text="&#xf105;" TextColor="{StaticResource lightColor}" FontFamily="{StaticResource FontAwesomeSolid}" HorizontalOptions="EndAndExpand" VerticalOptions="Center" FontSize="22" />
+                </StackLayout>
+            </ViewCell>
+            <ViewCell>
+                <StackLayout Orientation="Horizontal" Margin="20, 15" VerticalOptions="Center">
+                    <Label Text="Acknowledgements" TextColor="{StaticResource primaryColor}" FontFamily="Lato-Regular" VerticalOptions="Center" FontSize="18"/>
+                    <Label Text="&#xf105;" TextColor="{StaticResource lightColor}" FontFamily="{StaticResource FontAwesomeSolid}" HorizontalOptions="EndAndExpand" VerticalOptions="Center" FontSize="22" />
+                </StackLayout>
+            </ViewCell>
+        </TableSection>
+    </TableRoot>
+</TableView>
+    </ContentPage.Content>
+</ContentPage>
